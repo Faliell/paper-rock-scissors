@@ -23,7 +23,7 @@ function singleRound(playerSelection, computerSelection) {
       return "You lose, Paper beats Rock";
     } else {
       playerPoint++;
-      return "You win, Rock beats Sissors";
+      return "You win, Rock beats Scissors";
     }
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
@@ -31,15 +31,15 @@ function singleRound(playerSelection, computerSelection) {
       return "You win, Paper beats Rock";
     } else {
       cpuPoint++;
-      return "You lose, Sissors beats Paper";
+      return "You lose, Scissors beats Paper";
     }
   } else if (playerSelection === "sissors") {
     if (computerSelection === "paper") {
       playerPoint++;
-      return "You win, Sissors beats Paper";
+      return "You win, Scissors beats Paper";
     } else {
       cpuPoint++;
-      return "You lose, Rock beats Sissors";
+      return "You lose, Rock beats Scissors";
     }
   } else {
     return "Error Typo";
@@ -49,7 +49,7 @@ function singleRound(playerSelection, computerSelection) {
 function game() {
   for (let i = 0; i < 5; i++) {
     const playerSelection = window
-      .prompt("Rock, Sissors or Paper?")
+      .prompt("Rock, Scissors or Paper?")
       .toLowerCase();
     const computerSelection = computerPlay();
 
